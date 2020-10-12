@@ -35,3 +35,11 @@
 		transform: scaleX(1);
 	}
 }
+
+.navbar-light .navbar-toggler {
+	border-color: #000 !important;
+}
+
+button.navbar-toggler.collapsed {
+	border-color: transparent !important;
+}

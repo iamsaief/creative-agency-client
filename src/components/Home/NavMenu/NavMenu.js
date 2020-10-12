@@ -6,7 +6,7 @@ import logo from "../../../images/logos/logo.png";
 
 const NavMenu = () => {
 	return (
-		<Navbar bg="light-" expand="lg">
+		<Navbar bg="light-" expand="lg" className="px-0">
 			<Navbar.Brand href="#home">
 				<img src={logo} alt="logo.png" style={{ maxWidth: "150px" }} />
 			</Navbar.Brand>
