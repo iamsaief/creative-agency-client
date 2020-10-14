@@ -3,6 +3,10 @@
 	--brand-green: #7ab259;
 }
 
+#root {
+	overflow-x: hidden;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -63,7 +67,6 @@ button:focus {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 1.6;
-	text-align: center;
 	letter-spacing: 0.396px;
 	color: #111430;
 }
@@ -73,8 +76,6 @@ button:focus {
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 28px;
-	/* or 175% */
-	text-align: center;
 	letter-spacing: 0.396px;
 	color: rgba(0, 0, 0, 0.7);
 }

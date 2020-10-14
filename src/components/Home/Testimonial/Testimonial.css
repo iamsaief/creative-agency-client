@@ -27,6 +27,8 @@
 }
 
 .testimonial-card img {
-	max-width: 64px !important;
+	width: 64px !important;
+	height: 64px;
 	margin-right: 18px;
+	border-radius: 50%;
 }

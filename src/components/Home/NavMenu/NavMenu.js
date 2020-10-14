@@ -22,8 +22,8 @@ const NavMenu = () => {
 					<Link to="/" className="nav-link">
 						Our Team
 					</Link>
-					<Link to="/" className="nav-link">
-						Contact
+					<Link to="/dashboard" className="nav-link">
+						Dashboard
 					</Link>
 					<Link to="login" className="btn btn-dark">
 						Login

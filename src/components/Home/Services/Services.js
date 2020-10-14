@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import service1 from "../../../images/icons/service1.png";
 import service2 from "../../../images/icons/service2.png";
@@ -25,6 +25,16 @@ const Services = () => {
 				"With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
 		},
 	];
+
+	const [services, setServices] = useState([]);
+
+	/* API: Getting servicesData home page */
+	useEffect(() => {
+		fetch("http://localhost:5000/home/services")
+			.then((res) => res.json())
+			.then((data) => setServices(data));
+	}, []);
+
 	return (
 		<section className="services py-5">
 			<div className="container text-center py-xl-3">
@@ -33,8 +43,11 @@ const Services = () => {
 				</h4>
 				<div className="services-content pt-5">
 					<div className="row">
-						{servicesData.map((service) => (
+						{/* {servicesData.map((service) => (
 							<ServiceCard service={service} key={Math.random()}></ServiceCard>
+						))} */}
+						{services.map((service) => (
+							<ServiceCard service={service} key={service._id}></ServiceCard>
 						))}
 					</div>
 				</div>
