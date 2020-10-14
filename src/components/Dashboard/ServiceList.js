@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import defaultImg from "../../images/icons/service5.png";
 
 const ServiceList = () => {
+	document.title = "Dashboard | Service List";
 	const { user } = useContext(UserContext);
 	const [loggedInUser, setLoggedInUser] = user;
 	const [serviceList, setServiceList] = useState([]);

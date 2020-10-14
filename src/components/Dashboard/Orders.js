@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../App";
 
 const Orders = () => {
+	document.title = "Dashboard | Orders";
 	const { user } = useContext(UserContext);
 	const [loggedInUser, setLoggedInUser] = user;
 

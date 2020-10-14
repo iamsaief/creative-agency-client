@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import { useForm } from "react-hook-form";
 
 const Review = () => {
+	document.title = "Dashboard | Review";
 	const { user } = useContext(UserContext);
 	const [loggedInUser, setLoggedInUser] = user;
 
@@ -51,7 +52,7 @@ const Review = () => {
 								placeholder="Your name "
 								ref={register({ required: true })}
 							/>
-							{errors.name && <span className="text-danger">Valid name is required</span>}
+							{errors.author && <span className="text-danger">Valid name is required</span>}
 						</div>
 						<div className="form-group">
 							<input
@@ -61,7 +62,7 @@ const Review = () => {
 								placeholder="Company’s name, Designation"
 								ref={register({ required: true })}
 							/>
-							{errors.title && <span className="text-danger">Valid title is required</span>}
+							{errors.designation && <span className="text-danger">Valid designation is required</span>}
 						</div>
 						<div className="form-group">
 							<textarea
@@ -71,7 +72,7 @@ const Review = () => {
 								style={{ height: "112px" }}
 								ref={register({ required: true })}
 							/>
-							{errors.description && <span className="text-danger">Valid description is required</span>}
+							{errors.message && <span className="text-danger">Valid message is required</span>}
 						</div>
 						<button type="submit" className="btn btn-dark">
 							Send

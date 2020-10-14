@@ -3,6 +3,7 @@ import "./Dashboard.css";
 import Sidebar from "./Sidebar";
 
 const Dashboard = () => {
+	document.title = "CA | Dashboard";
 	return (
 		<>
 			<Sidebar></Sidebar>
