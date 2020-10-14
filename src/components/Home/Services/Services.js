@@ -30,7 +30,7 @@ const Services = () => {
 
 	/* API: Getting servicesData home page */
 	useEffect(() => {
-		fetch("http://localhost:5000/home/services")
+		fetch("https://afternoon-reaches-35522.herokuapp.com/home/services")
 			.then((res) => res.json())
 			.then((data) => setServices(data));
 	}, []);

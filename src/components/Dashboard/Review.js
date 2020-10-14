@@ -13,7 +13,7 @@ const Review = () => {
 	const onSubmit = (data) => {
 		console.log(data);
 		data.img = loggedInUser.photoURL;
-		fetch("http://localhost:5000/addReview", {
+		fetch("https://afternoon-reaches-35522.herokuapp.com/addReview", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data),

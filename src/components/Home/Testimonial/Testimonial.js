@@ -34,7 +34,7 @@ const Testimonial = () => {
 
 	/* API: Getting Reviews Data on home page */
 	useEffect(() => {
-		fetch("http://localhost:5000/home/reviews")
+		fetch("https://afternoon-reaches-35522.herokuapp.com/home/reviews")
 			.then((res) => res.json())
 			.then((data) => setReviews(data));
 	}, []);

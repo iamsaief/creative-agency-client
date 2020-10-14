@@ -13,7 +13,7 @@ const Orders = () => {
 	const [selectedService, setSelectedService] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:5000/home/services")
+		fetch("https://afternoon-reaches-35522.herokuapp.com/home/services")
 			.then((res) => res.json())
 			.then((data) => setSelectedService(data.find((item) => item._id === _id)));
 	}, []);
@@ -21,7 +21,7 @@ const Orders = () => {
 	const { register, handleSubmit, errors } = useForm();
 	const onSubmit = (data) => {
 		console.log(data);
-		fetch("http://localhost:5000/addOrder", {
+		fetch("https://afternoon-reaches-35522.herokuapp.com/addOrder", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data),
