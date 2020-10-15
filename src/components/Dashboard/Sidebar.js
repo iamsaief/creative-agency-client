@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/logos/logo.png";
+import { UserContext } from "../../App";
 
 const Sidebar = () => {
+	const { user } = useContext(UserContext);
+	const [loggedInUser, setLoggedInUser] = user;
+
 	return (
 		<div className="sidebar w-25 h-100 p-4">
 			<Link to="/">
@@ -21,6 +25,10 @@ const Sidebar = () => {
 				<Link to="/dashboard/review" className="btn">
 					<i className="fas fa-comment-dots"></i>
 					<span>Review</span>
+				</Link>
+				<Link to="/dashboard/service-list-admin" className="btn">
+					<i className="fas fa-shopping-basket"></i>
+					<span>Admin Service list</span>
 				</Link>
 			</div>
 		</div>

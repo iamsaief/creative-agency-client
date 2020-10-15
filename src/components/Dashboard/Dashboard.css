@@ -16,11 +16,15 @@
 	flex-direction: column;
 	align-items: flex-start;
 }
+.sidebar-buttons .btn {
+	text-align: left;
+}
 
 .sidebar-buttons .btn i {
 	margin-right: 5px;
 }
 
+/* ********************** Order Form */
 form.order-form {
 	max-width: 570px;
 }
@@ -48,7 +52,12 @@ input.form-control[type="file"] {
 	box-sizing: border-box;
 	color: #009444;
 }
+input.form-control[type="file"]::-webkit-file-upload-button {
+	display: none;
+	line-height: 30px;
+}
 
+/* ********************** Service List */
 .service-list-card {
 	background: #ffffff;
 	border-radius: 20px;
@@ -98,4 +107,66 @@ input.form-control[type="file"] {
 }
 .dashboard-data header div > i {
 	margin-right: 4px;
+}
+
+/* ********************** Service List Admin */
+.service-list-admin {
+	padding: 23px 18px;
+	background: #ffffff;
+	border-radius: 20px;
+}
+.service-list-admin table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.service-list-admin table thead th {
+	background: #f5f6fa;
+}
+.service-list-admin table th,
+.service-list-admin table td {
+	padding: 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #686868;
+}
+.service-list-admin table td {
+	padding: 10px 20px;
+	color: #000;
+}
+
+.service-list-admin table thead th:first-child {
+	border-radius: 13px 0 0 13px;
+}
+.service-list-admin table thead th:last-child {
+	border-radius: 0 13px 13px 0;
+}
+
+.service-list-admin table .btn {
+	padding: 5px;
+	padding-top: 3px;
+}
+.service-list-admin table tr:first-child td {
+	padding-top: 20px;
+}
+.service-list-admin table .description {
+	width: 25%;
+}
+@media (max-width: 767px) {
+	.service-list-admin {
+		overflow-x: scroll;
+	}
+
+	.service-list-admin table th {
+		padding: 15px 10px;
+	}
+	.service-list-admin table td {
+		padding: 10px;
+	}
+}
+
+select {
+	border: none;
+	outline: none;
+	cursor: context-menu;
 }

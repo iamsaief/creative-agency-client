@@ -2,18 +2,21 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../App";
 import Sidebar from "./Sidebar";
 import defaultImg from "../../images/icons/service5.png";
+import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 
 const ServiceList = () => {
 	document.title = "Dashboard | Service List";
 	const { user } = useContext(UserContext);
 	const [loggedInUser, setLoggedInUser] = user;
 	const [serviceList, setServiceList] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		fetch(`https://afternoon-reaches-35522.herokuapp.com/serviceList?email=${loggedInUser.email}`)
 			.then((res) => res.json())
 			.then((data) => {
 				setServiceList([...data]);
+				setLoading(false);
 			})
 			.catch((err) => console.log(err));
 	}, []);
@@ -60,11 +63,15 @@ const ServiceList = () => {
 					)}
 				</header>
 				<main className="p-5">
-					<div className="service-list container-fluid">
+					<div className="service-list container-fluid px-0">
 						<div className="row">
-							{serviceList.length
-								? serviceList.map((list) => <ListCard list={list}></ListCard>)
-								: "Nothing found, please LOGIN"}
+							{loading ? (
+								<LoadingAnimation></LoadingAnimation>
+							) : serviceList.length ? (
+								serviceList.map((list) => <ListCard list={list}></ListCard>)
+							) : (
+								<div className="alert alert-warning">No data found! Please Login</div>
+							)}
 						</div>
 					</div>
 				</main>
