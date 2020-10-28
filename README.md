@@ -2,7 +2,7 @@
 
 [<img src="./.github/ca-thumbnail.jpg" alt="" width="100%">](https://ims-creative-agency.web.app/)
 
-#### Features -
+### Features -
 
 -   Modern responsive home page to showcase creative agency
 -   User can register and order services
@@ -10,7 +10,7 @@
 -   Orders list for both users and admin
 -   Admin can manage the services user ordered
 
-#### Technologies -
+### Technologies -
 
 -   ReactJS
 -   Bootstrap
